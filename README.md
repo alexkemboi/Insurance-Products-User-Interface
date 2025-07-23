@@ -55,7 +55,7 @@ A full-stack web application for managing insurance products with role-based log
 
 \`\`\`bash
 # Clone the repository
-git clone https://github.com/your-username/insurance-app.git
+git clone https://github.com/alexkemboi/Insurance-Products-User-Interface.git
 cd insurance-app
 
 # Install dependencies
