@@ -35,15 +35,10 @@ const ProductsTable = ({ data }: { data: any[] }) => {
 };
 
 const Products = () => {
-    const [ReactApexChart, setChart] = useState(null);
+
     const [products, setProducts] = useState<any[]>([]);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        if (typeof window !== "undefined") {
-            setChart(() => require("react-apexcharts").default);
-        }
-    }, []);
 
     useEffect(() => {
         const fetchproducts = async () => {
