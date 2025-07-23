@@ -11,7 +11,7 @@ type InsuranceProduct = {
 };
 
 // Mock data
-let products: InsuranceProduct[] = [
+const products: InsuranceProduct[] = [
   { id: 1, name: 'Health Protect Plus', type: 'Health', coverage: 'Full', price: 120 },
   { id: 2, name: 'Auto Secure', type: 'Auto', coverage: 'Collision + Liability', price: 90 },
   { id: 3, name: 'Home Shield', type: 'Home', coverage: 'Fire, Theft, Natural Disasters', price: 150 },

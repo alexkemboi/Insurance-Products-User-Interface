@@ -3,10 +3,6 @@ import React from 'react';
 import { Sidebar, Menu, MenuItem, sidebarClasses } from "react-pro-sidebar";
 import {
 	Users,
-	BookOpen,
-	Upload,
-	Bell,
-	ShieldCheck,
 } from "lucide-react";
 
 const SideBarComponent = () => {
