@@ -50,7 +50,7 @@ const Products = () => {
         const fetchproducts = async () => {
             try {
                 // Simulate an actual API call
-                const response = await fetch("http://localhost:3000/api/products");
+                const response = await fetch("https://insurance-products-user-int-git-1c3b24-alexkemboi4127s-projects.vercel.app/api/products");
                 const data = await response.json();
 
                 if (Array.isArray(data.data)) {

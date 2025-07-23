@@ -17,7 +17,7 @@ const Login: React.FC = () => {
 
 
         try {
-            const res = await fetch("http://localhost:3000/api/auth/login", {
+            const res = await fetch("https://insurance-products-user-int-git-1c3b24-alexkemboi4127s-projects.vercel.app/api/auth/login", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email, password }),
@@ -36,7 +36,7 @@ const Login: React.FC = () => {
             router.push("/dashboard");
         } catch (err) {
             console.error("Login error:", err);
-            setError("An unexpected error occurred");
+            setError("Refer to readme");
         }
     };
 
