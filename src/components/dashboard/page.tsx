@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import TopCards from "../TopCards";
 import Layout from "@/app/layouts";
 
+
 // Table component
-const ProductsTable = ({ data }: { data: any[] }) => {
+const ProductsTable = ({ data }: { data: InsuranceProduct[] }) => {
 	if (data.length === 0) return null;
 
 	return (
@@ -34,17 +35,19 @@ const ProductsTable = ({ data }: { data: any[] }) => {
 		</div>
 	);
 };
-
+type InsuranceProduct = {
+	id: number;
+	name: string;
+	type: string;
+	coverage: string;
+	price: number;
+};
 const Dashboard = () => {
-	const [ReactApexChart, setChart] = useState(null);
-	const [products, setProducts] = useState<any[]>([]);
+
+	const [products, setProducts] = useState<InsuranceProduct[]>([]);
 	const [loading, setLoading] = useState(true);
 
-	useEffect(() => {
-		if (typeof window !== "undefined") {
-			setChart(() => require("react-apexcharts").default);
-		}
-	}, []);
+
 
 	useEffect(() => {
 		const fetchproducts = async () => {

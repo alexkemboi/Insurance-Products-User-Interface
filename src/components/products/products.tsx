@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Layout from "@/app/layouts";
 
 // Table component
-const ProductsTable = ({ data }: { data: any[] }) => {
+const ProductsTable = ({ data }: { data: InsuranceProduct[] }) => {
     if (data.length === 0) return null;
 
     return (
@@ -33,10 +33,16 @@ const ProductsTable = ({ data }: { data: any[] }) => {
         </div>
     );
 };
-
+type InsuranceProduct = {
+    id: number;
+    name: string;
+    type: string;
+    coverage: string;
+    price: number;
+};
 const Products = () => {
 
-    const [products, setProducts] = useState<any[]>([]);
+    const [products, setProducts] = useState<InsuranceProduct[]>([]);
     const [loading, setLoading] = useState(true);
 
 
